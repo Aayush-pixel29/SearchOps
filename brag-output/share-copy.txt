@@ -1,0 +1,16 @@
+🚀 Introducing SearchOps: Search, Retrieval & Ranking Engineering Platform.
+
+Stop treating search as a black-box prompt. SearchOps is a full-stack IR platform to ingest documents, run competing retrievers (BM25, Dense Cosine, Hybrid α-Fusion, Reranking), inspect multi-stage score decompositions in real-time, and benchmark ranking quality (Recall@K, MRR, nDCG@10).
+
+🔥 Key Highlights:
+• Lexical BM25 + Dense Semantic Vectors (MiniLM 384d)
+• Dynamic Linear Hybrid Fusion with configurable alpha
+• "Why this result ranked #1" score decomposition inspector
+• Multi-tenant SQL isolation + Redis TTL caching
+• Automated IR evaluation harness (Recall@10 = 0.922, nDCG@10 = 0.893)
+• Built with FastAPI, Next.js 14, SQLAlchemy, and Docker
+
+Check out the code & reproducible benchmark:
+👉 https://github.com/Aayush-pixel29/SearchOps
+
+#AI #MachineLearning #InformationRetrieval #Search #FastAPI #NextJS #OpenSource #FullStack
