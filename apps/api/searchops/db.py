@@ -18,6 +18,21 @@ def init_engine(url: str | None = None):
     connect_args = {}
     if database_url.startswith("sqlite"):
         connect_args = {"check_same_thread": False}
+    elif database_url.startswith("postgres://"):
+        database_url = database_url.replace("postgres://", "postgresql+asyncpg://", 1)
+    elif database_url.startswith("postgresql://") and not database_url.startswith("postgresql+asyncpg://"):
+        database_url = database_url.replace("postgresql://", "postgresql+asyncpg://", 1)
+    
+    # Clean query parameters for asyncpg if needed
+    if "postgresql+asyncpg://" in database_url and "channel_binding=" in database_url:
+        import urllib.parse
+        parsed = urllib.parse.urlparse(database_url)
+        q = urllib.parse.parse_qs(parsed.query)
+        # asyncpg accepts ssl in connect_args or ssl parameter
+        q.pop("channel_binding", None)
+        new_query = urllib.parse.urlencode(q, doseq=True)
+        database_url = urllib.parse.urlunparse(parsed._replace(query=new_query))
+
     engine = create_async_engine(database_url, echo=False, connect_args=connect_args)
     SessionLocal = async_sessionmaker(engine, expire_on_commit=False, class_=AsyncSession)
     return engine

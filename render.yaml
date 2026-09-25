@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: searchops-api
+    runtime: python
+    buildCommand: "pip install -r requirements.txt && pip install -e apps/api"
+    startCommand: "uvicorn searchops.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: ENV
+        value: production
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        sync: false
+      - key: REDIS_URL
+        sync: false
+      - key: EMBEDDING_PROVIDER
+        value: hashed
+      - key: RERANKER
+        value: heuristic
