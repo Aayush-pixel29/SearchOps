@@ -43,6 +43,15 @@ def create_app() -> FastAPI:
     app.include_router(document_router)
     app.include_router(search_router)
 
+    @app.get("/")
+    async def root():
+        return {
+            "message": "SearchOps API is running",
+            "docs": "/docs",
+            "health": "/health",
+            "status": "online",
+        }
+
     @app.get("/health")
     async def health():
         return {"status": "ok"}
