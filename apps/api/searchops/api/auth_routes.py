@@ -33,6 +33,12 @@ async def login(body: LoginRequest, session: AsyncSession = Depends(get_session)
     tenant = (
         await session.execute(select(Tenant).where(Tenant.slug == body.tenant_slug))
     ).scalar_one_or_none()
+    if tenant is None and body.tenant_slug == "demo":
+        from searchops.demo.seed import ensure_demo_data
+        await ensure_demo_data(session)
+        tenant = (
+            await session.execute(select(Tenant).where(Tenant.slug == body.tenant_slug))
+        ).scalar_one_or_none()
     if tenant is None:
         raise HTTPException(status_code=401, detail="unknown tenant")
     user = (
