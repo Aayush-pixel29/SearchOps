@@ -1,0 +1,131 @@
+[
+  {
+    "id": "case-python-backend",
+    "query": "best python backend framework",
+    "relevant_documents": [
+      "fw-fastapi",
+      "fw-django",
+      "fw-flask",
+      "fw-litestar"
+    ],
+    "relevance_labels": {
+      "fw-fastapi": 3,
+      "fw-django": 3,
+      "fw-flask": 2,
+      "fw-litestar": 2,
+      "fw-starlette": 1
+    }
+  },
+  {
+    "id": "case-laptops",
+    "query": "lightweight laptops for programming under 80000 with 16GB RAM",
+    "relevant_documents": [
+      "laptop-acer-swift-go",
+      "laptop-hp-pavilion",
+      "laptop-asus-vivobook-16",
+      "laptop-thinkpad-e14",
+      "laptop-yoga-slim",
+      "laptop-samsung-galaxy-book",
+      "laptop-honor-magicbook",
+      "laptop-msi-modern"
+    ],
+    "relevance_labels": {
+      "laptop-thinkpad-e14": 3,
+      "laptop-yoga-slim": 3,
+      "laptop-acer-swift-go": 3,
+      "laptop-samsung-galaxy-book": 3,
+      "laptop-asus-vivobook-16": 2,
+      "laptop-hp-pavilion": 2,
+      "laptop-honor-magicbook": 2,
+      "laptop-msi-modern": 2,
+      "laptop-lenovo-loq": 1
+    }
+  },
+  {
+    "id": "case-hybrid",
+    "query": "hybrid search bm25 dense fusion",
+    "relevant_documents": [
+      "ir-hybrid",
+      "ir-bm25",
+      "ir-dense",
+      "prod-fusion"
+    ],
+    "relevance_labels": {
+      "ir-hybrid": 3,
+      "prod-fusion": 3,
+      "ir-bm25": 2,
+      "ir-dense": 2,
+      "ir-rerank": 1
+    }
+  },
+  {
+    "id": "case-metrics",
+    "query": "how to evaluate ranking with ndcg and mrr",
+    "relevant_documents": [
+      "ir-ndcg",
+      "ir-mrr",
+      "ir-recall",
+      "ir-eval"
+    ],
+    "relevance_labels": {
+      "ir-ndcg": 3,
+      "ir-mrr": 3,
+      "ir-eval": 2,
+      "ir-recall": 2
+    }
+  },
+  {
+    "id": "case-vector-db",
+    "query": "postgres pgvector embeddings cosine search",
+    "relevant_documents": [
+      "db-postgres",
+      "db-pgvector",
+      "ir-dense",
+      "ml-embeddings"
+    ],
+    "relevance_labels": {
+      "db-pgvector": 3,
+      "db-postgres": 3,
+      "ir-dense": 2,
+      "ml-embeddings": 2,
+      "ml-cosine": 1
+    }
+  },
+  {
+    "id": "case-cache",
+    "query": "redis cache repeated search queries",
+    "relevant_documents": [
+      "db-redis",
+      "prod-cache"
+    ],
+    "relevance_labels": {
+      "db-redis": 3,
+      "prod-cache": 3
+    }
+  },
+  {
+    "id": "case-rerank",
+    "query": "cross encoder reranker for search results",
+    "relevant_documents": [
+      "ir-rerank",
+      "ir-hybrid"
+    ],
+    "relevance_labels": {
+      "ir-rerank": 3,
+      "ir-hybrid": 1,
+      "ir-colbert": 1
+    }
+  },
+  {
+    "id": "case-tenancy",
+    "query": "tenant isolation for search api",
+    "relevant_documents": [
+      "sec-tenancy",
+      "sec-jwt"
+    ],
+    "relevance_labels": {
+      "sec-tenancy": 3,
+      "sec-jwt": 2
+    }
+  }
+]

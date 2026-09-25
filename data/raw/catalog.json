@@ -1,0 +1,1102 @@
+[
+  {
+    "id": "laptop-acer-aspire-5",
+    "title": "Acer Aspire 5 14",
+    "content": "Acer Aspire 5 14. Ryzen 5, 512GB SSD, lightweight 1.5kg programming laptop. Price INR 54990. RAM 16GB. Category laptop.",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "laptop",
+      "price": 54990,
+      "ram_gb": 16,
+      "language": "en",
+      "tags": [
+        "laptop",
+        "hardware",
+        "programming"
+      ],
+      "popularity": 64
+    }
+  },
+  {
+    "id": "laptop-acer-swift-go",
+    "title": "Acer Swift Go 14",
+    "content": "Acer Swift Go 14. OLED display, Intel Core Ultra, thin aluminum chassis for coding. Price INR 72990. RAM 16GB. Category laptop.",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "laptop",
+      "price": 72990,
+      "ram_gb": 16,
+      "language": "en",
+      "tags": [
+        "laptop",
+        "hardware",
+        "programming"
+      ],
+      "popularity": 52
+    }
+  },
+  {
+    "id": "laptop-lenovo-ideapad-slim",
+    "title": "Lenovo IdeaPad Slim 3",
+    "content": "Lenovo IdeaPad Slim 3. Budget Windows laptop, 15 inch, student programming. Price INR 47990. RAM 8GB. Category laptop.",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "laptop",
+      "price": 47990,
+      "ram_gb": 8,
+      "language": "en",
+      "tags": [
+        "laptop",
+        "hardware",
+        "programming"
+      ],
+      "popularity": 69
+    }
+  },
+  {
+    "id": "laptop-lenovo-loq",
+    "title": "Lenovo LOQ 15",
+    "content": "Lenovo LOQ 15. RTX graphics, 16GB RAM, under 80000 gaming plus coding machine. Price INR 79990. RAM 16GB. Category laptop.",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "laptop",
+      "price": 79990,
+      "ram_gb": 16,
+      "language": "en",
+      "tags": [
+        "laptop",
+        "hardware",
+        "programming"
+      ],
+      "popularity": 47
+    }
+  },
+  {
+    "id": "laptop-hp-pavilion",
+    "title": "HP Pavilion 14",
+    "content": "HP Pavilion 14. Silver 1.4kg laptop, 16GB RAM, good keyboard for Python development. Price INR 62990. RAM 16GB. Category laptop.",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "laptop",
+      "price": 62990,
+      "ram_gb": 16,
+      "language": "en",
+      "tags": [
+        "laptop",
+        "hardware",
+        "programming"
+      ],
+      "popularity": 59
+    }
+  },
+  {
+    "id": "laptop-hp-victus",
+    "title": "HP Victus 15",
+    "content": "HP Victus 15. Performance laptop under 80000 with dedicated GPU. Price INR 75990. RAM 16GB. Category laptop.",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "laptop",
+      "price": 75990,
+      "ram_gb": 16,
+      "language": "en",
+      "tags": [
+        "laptop",
+        "hardware",
+        "programming"
+      ],
+      "popularity": 50
+    }
+  },
+  {
+    "id": "laptop-asus-vivobook-16",
+    "title": "ASUS Vivobook 16",
+    "content": "ASUS Vivobook 16. Large screen coding laptop, 16GB RAM, lightweight for commuting. Price INR 68990. RAM 16GB. Category laptop.",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "laptop",
+      "price": 68990,
+      "ram_gb": 16,
+      "language": "en",
+      "tags": [
+        "laptop",
+        "hardware",
+        "programming"
+      ],
+      "popularity": 55
+    }
+  },
+  {
+    "id": "laptop-asus-tuf",
+    "title": "ASUS TUF A15",
+    "content": "ASUS TUF A15. Rugged laptop slightly over 80000, 16GB RAM, CUDA capable. Price INR 81990. RAM 16GB. Category laptop.",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "laptop",
+      "price": 81990,
+      "ram_gb": 16,
+      "language": "en",
+      "tags": [
+        "laptop",
+        "hardware",
+        "programming"
+      ],
+      "popularity": 46
+    }
+  },
+  {
+    "id": "laptop-dell-inspiron",
+    "title": "Dell Inspiron 14",
+    "content": "Dell Inspiron 14. Office and light programming, 8GB RAM upgradeable. Price INR 59990. RAM 8GB. Category laptop.",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "laptop",
+      "price": 59990,
+      "ram_gb": 8,
+      "language": "en",
+      "tags": [
+        "laptop",
+        "hardware",
+        "programming"
+      ],
+      "popularity": 61
+    }
+  },
+  {
+    "id": "laptop-dell-g15",
+    "title": "Dell G15",
+    "content": "Dell G15. Gaming laptop above 80000, 16GB RAM, heavy chassis. Price INR 84990. RAM 16GB. Category laptop.",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "laptop",
+      "price": 84990,
+      "ram_gb": 16,
+      "language": "en",
+      "tags": [
+        "laptop",
+        "hardware",
+        "programming"
+      ],
+      "popularity": 44
+    }
+  },
+  {
+    "id": "laptop-macbook-air-m1",
+    "title": "Refurbished MacBook Air M1",
+    "content": "Refurbished MacBook Air M1. Lightweight Apple laptop for programming, fanless, 8GB unified memory. Price INR 74990. RAM 8GB. Category laptop.",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "laptop",
+      "price": 74990,
+      "ram_gb": 8,
+      "language": "en",
+      "tags": [
+        "laptop",
+        "hardware",
+        "programming"
+      ],
+      "popularity": 51
+    }
+  },
+  {
+    "id": "laptop-macbook-air-m2",
+    "title": "MacBook Air M2",
+    "content": "MacBook Air M2. Premium lightweight laptop, 16GB, over 80000. Price INR 99990. RAM 16GB. Category laptop.",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "laptop",
+      "price": 99990,
+      "ram_gb": 16,
+      "language": "en",
+      "tags": [
+        "laptop",
+        "hardware",
+        "programming"
+      ],
+      "popularity": 34
+    }
+  },
+  {
+    "id": "laptop-honor-magicbook",
+    "title": "Honor MagicBook X16",
+    "content": "Honor MagicBook X16. 16GB RAM, 1.7kg, Windows coding laptop under 80000. Price INR 51990. RAM 16GB. Category laptop.",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "laptop",
+      "price": 51990,
+      "ram_gb": 16,
+      "language": "en",
+      "tags": [
+        "laptop",
+        "hardware",
+        "programming"
+      ],
+      "popularity": 66
+    }
+  },
+  {
+    "id": "laptop-samsung-galaxy-book",
+    "title": "Samsung Galaxy Book4",
+    "content": "Samsung Galaxy Book4. AMOLED, light 1.4kg, 16GB RAM programming ultrabook. Price INR 77990. RAM 16GB. Category laptop.",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "laptop",
+      "price": 77990,
+      "ram_gb": 16,
+      "language": "en",
+      "tags": [
+        "laptop",
+        "hardware",
+        "programming"
+      ],
+      "popularity": 49
+    }
+  },
+  {
+    "id": "laptop-msi-modern",
+    "title": "MSI Modern 14",
+    "content": "MSI Modern 14. Creator laptop, 16GB RAM, under 60000 for backend development. Price INR 56990. RAM 16GB. Category laptop.",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "laptop",
+      "price": 56990,
+      "ram_gb": 16,
+      "language": "en",
+      "tags": [
+        "laptop",
+        "hardware",
+        "programming"
+      ],
+      "popularity": 63
+    }
+  },
+  {
+    "id": "laptop-lg-gram",
+    "title": "LG Gram 16",
+    "content": "LG Gram 16. Ultra lightweight 1.2kg, expensive, 16GB RAM. Price INR 119990. RAM 16GB. Category laptop.",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "laptop",
+      "price": 119990,
+      "ram_gb": 16,
+      "language": "en",
+      "tags": [
+        "laptop",
+        "hardware",
+        "programming"
+      ],
+      "popularity": 21
+    }
+  },
+  {
+    "id": "laptop-framework-13",
+    "title": "Framework Laptop 13",
+    "content": "Framework Laptop 13. Repairable programming laptop, 16GB, modular ports. Price INR 94990. RAM 16GB. Category laptop.",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "laptop",
+      "price": 94990,
+      "ram_gb": 16,
+      "language": "en",
+      "tags": [
+        "laptop",
+        "hardware",
+        "programming"
+      ],
+      "popularity": 37
+    }
+  },
+  {
+    "id": "laptop-thinkpad-e14",
+    "title": "Lenovo ThinkPad E14",
+    "content": "Lenovo ThinkPad E14. Classic keyboard, 16GB RAM, best for long coding sessions under 80000. Price INR 72990. RAM 16GB. Category laptop.",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "laptop",
+      "price": 72990,
+      "ram_gb": 16,
+      "language": "en",
+      "tags": [
+        "laptop",
+        "hardware",
+        "programming"
+      ],
+      "popularity": 52
+    }
+  },
+  {
+    "id": "laptop-yoga-slim",
+    "title": "Lenovo Yoga Slim 7",
+    "content": "Lenovo Yoga Slim 7. Metal ultrabook, 16GB, light 1.3kg, programming under 80000. Price INR 78990. RAM 16GB. Category laptop.",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "laptop",
+      "price": 78990,
+      "ram_gb": 16,
+      "language": "en",
+      "tags": [
+        "laptop",
+        "hardware",
+        "programming"
+      ],
+      "popularity": 48
+    }
+  },
+  {
+    "id": "laptop-chromebook",
+    "title": "Acer Chromebook Plus",
+    "content": "Acer Chromebook Plus. Not ideal for native programming, Linux limited, cheap. Price INR 32990. RAM 8GB. Category laptop.",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "laptop",
+      "price": 32990,
+      "ram_gb": 8,
+      "language": "en",
+      "tags": [
+        "laptop",
+        "hardware",
+        "programming"
+      ],
+      "popularity": 79
+    }
+  },
+  {
+    "id": "fw-fastapi",
+    "title": "FastAPI",
+    "content": "FastAPI is a backend or full-stack framework. Python async web framework with OpenAPI, Pydantic, high performance APIs",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "framework",
+      "language": "en",
+      "tags": [
+        "software",
+        "backend"
+      ],
+      "popularity": 70
+    }
+  },
+  {
+    "id": "fw-django",
+    "title": "Django",
+    "content": "Django is a backend or full-stack framework. Batteries-included Python web framework, ORM, admin, batteries for backend",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "framework",
+      "language": "en",
+      "tags": [
+        "software",
+        "backend"
+      ],
+      "popularity": 70
+    }
+  },
+  {
+    "id": "fw-flask",
+    "title": "Flask",
+    "content": "Flask is a backend or full-stack framework. Minimal Python microframework, WSGI, extensions ecosystem",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "framework",
+      "language": "en",
+      "tags": [
+        "software",
+        "backend"
+      ],
+      "popularity": 70
+    }
+  },
+  {
+    "id": "fw-starlette",
+    "title": "Starlette",
+    "content": "Starlette is a backend or full-stack framework. ASGI toolkit underneath FastAPI, websockets and routing",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "framework",
+      "language": "en",
+      "tags": [
+        "software",
+        "backend"
+      ],
+      "popularity": 70
+    }
+  },
+  {
+    "id": "fw-litestar",
+    "title": "Litestar",
+    "content": "Litestar is a backend or full-stack framework. Typed Python ASGI framework alternative to FastAPI",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "framework",
+      "language": "en",
+      "tags": [
+        "software",
+        "backend"
+      ],
+      "popularity": 70
+    }
+  },
+  {
+    "id": "fw-express",
+    "title": "Express",
+    "content": "Express is a backend or full-stack framework. Node.js HTTP framework, middleware, JSON APIs",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "framework",
+      "language": "en",
+      "tags": [
+        "software",
+        "backend"
+      ],
+      "popularity": 70
+    }
+  },
+  {
+    "id": "fw-nestjs",
+    "title": "NestJS",
+    "content": "NestJS is a backend or full-stack framework. Opinionated TypeScript backend framework on Express or Fastify",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "framework",
+      "language": "en",
+      "tags": [
+        "software",
+        "backend"
+      ],
+      "popularity": 70
+    }
+  },
+  {
+    "id": "fw-spring",
+    "title": "Spring Boot",
+    "content": "Spring Boot is a backend or full-stack framework. Java backend framework, enterprise APIs, dependency injection",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "framework",
+      "language": "en",
+      "tags": [
+        "software",
+        "backend"
+      ],
+      "popularity": 70
+    }
+  },
+  {
+    "id": "fw-rails",
+    "title": "Ruby on Rails",
+    "content": "Ruby on Rails is a backend or full-stack framework. Convention over configuration web framework",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "framework",
+      "language": "en",
+      "tags": [
+        "software",
+        "backend"
+      ],
+      "popularity": 70
+    }
+  },
+  {
+    "id": "fw-laravel",
+    "title": "Laravel",
+    "content": "Laravel is a backend or full-stack framework. PHP backend framework with Eloquent ORM",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "framework",
+      "language": "en",
+      "tags": [
+        "software",
+        "backend"
+      ],
+      "popularity": 70
+    }
+  },
+  {
+    "id": "fw-nextjs",
+    "title": "Next.js",
+    "content": "Next.js is a backend or full-stack framework. React full-stack framework, App Router, server components",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "framework",
+      "language": "en",
+      "tags": [
+        "software",
+        "backend"
+      ],
+      "popularity": 70
+    }
+  },
+  {
+    "id": "fw-remix",
+    "title": "Remix",
+    "content": "Remix is a backend or full-stack framework. React web framework focused on nested routing and forms",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "framework",
+      "language": "en",
+      "tags": [
+        "software",
+        "backend"
+      ],
+      "popularity": 70
+    }
+  },
+  {
+    "id": "fw-sveltekit",
+    "title": "SvelteKit",
+    "content": "SvelteKit is a backend or full-stack framework. Svelte application framework",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "framework",
+      "language": "en",
+      "tags": [
+        "software",
+        "backend"
+      ],
+      "popularity": 70
+    }
+  },
+  {
+    "id": "fw-axum",
+    "title": "Axum",
+    "content": "Axum is a backend or full-stack framework. Rust async web framework on Tokio and Tower",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "framework",
+      "language": "en",
+      "tags": [
+        "software",
+        "backend"
+      ],
+      "popularity": 70
+    }
+  },
+  {
+    "id": "fw-actix",
+    "title": "Actix Web",
+    "content": "Actix Web is a backend or full-stack framework. High performance Rust HTTP framework",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "framework",
+      "language": "en",
+      "tags": [
+        "software",
+        "backend"
+      ],
+      "popularity": 70
+    }
+  },
+  {
+    "id": "ir-bm25",
+    "title": "BM25 ranking",
+    "content": "Okapi BM25 is a probabilistic keyword ranking function using term frequency and IDF",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "search",
+      "language": "en",
+      "tags": [
+        "information-retrieval",
+        "ml"
+      ],
+      "popularity": 60
+    }
+  },
+  {
+    "id": "ir-tfidf",
+    "title": "TF-IDF",
+    "content": "Term frequency inverse document frequency classic vector space retrieval",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "search",
+      "language": "en",
+      "tags": [
+        "information-retrieval",
+        "ml"
+      ],
+      "popularity": 60
+    }
+  },
+  {
+    "id": "ir-dense",
+    "title": "Dense retrieval",
+    "content": "Bi-encoder embeddings map queries and documents into a vector space for cosine search",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "search",
+      "language": "en",
+      "tags": [
+        "information-retrieval",
+        "ml"
+      ],
+      "popularity": 60
+    }
+  },
+  {
+    "id": "ir-hybrid",
+    "title": "Hybrid search",
+    "content": "Fuse BM25 keyword scores with dense vector scores using alpha linear combination or RRF",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "search",
+      "language": "en",
+      "tags": [
+        "information-retrieval",
+        "ml"
+      ],
+      "popularity": 60
+    }
+  },
+  {
+    "id": "ir-rerank",
+    "title": "Cross-encoder reranking",
+    "content": "A cross-encoder scores query-document pairs jointly and reranks a candidate list",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "search",
+      "language": "en",
+      "tags": [
+        "information-retrieval",
+        "ml"
+      ],
+      "popularity": 60
+    }
+  },
+  {
+    "id": "ir-ndcg",
+    "title": "nDCG metric",
+    "content": "Normalized discounted cumulative gain evaluates ranking quality with graded relevance",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "search",
+      "language": "en",
+      "tags": [
+        "information-retrieval",
+        "ml"
+      ],
+      "popularity": 60
+    }
+  },
+  {
+    "id": "ir-mrr",
+    "title": "Mean Reciprocal Rank",
+    "content": "MRR is the average of 1/rank of the first relevant document",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "search",
+      "language": "en",
+      "tags": [
+        "information-retrieval",
+        "ml"
+      ],
+      "popularity": 60
+    }
+  },
+  {
+    "id": "ir-recall",
+    "title": "Recall at K",
+    "content": "Recall@K is the fraction of relevant documents retrieved in the top K",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "search",
+      "language": "en",
+      "tags": [
+        "information-retrieval",
+        "ml"
+      ],
+      "popularity": 60
+    }
+  },
+  {
+    "id": "ir-ann",
+    "title": "Approximate nearest neighbors",
+    "content": "HNSW and IVF indexes speed up vector search in pgvector and FAISS",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "search",
+      "language": "en",
+      "tags": [
+        "information-retrieval",
+        "ml"
+      ],
+      "popularity": 60
+    }
+  },
+  {
+    "id": "ir-chunking",
+    "title": "Document chunking",
+    "content": "Split long documents with overlap so embeddings stay semantically coherent",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "search",
+      "language": "en",
+      "tags": [
+        "information-retrieval",
+        "ml"
+      ],
+      "popularity": 60
+    }
+  },
+  {
+    "id": "ir-query-parse",
+    "title": "Query understanding",
+    "content": "Extract filters like price and RAM from natural language before retrieval",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "search",
+      "language": "en",
+      "tags": [
+        "information-retrieval",
+        "ml"
+      ],
+      "popularity": 60
+    }
+  },
+  {
+    "id": "ir-eval",
+    "title": "IR evaluation",
+    "content": "Offline evaluation needs labeled queries, relevant document ids, and ranking metrics",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "search",
+      "language": "en",
+      "tags": [
+        "information-retrieval",
+        "ml"
+      ],
+      "popularity": 60
+    }
+  },
+  {
+    "id": "ir-rag-limits",
+    "title": "Why RAG chat is not search",
+    "content": "A chatbot hides ranking failures. Search engineering inspects BM25 vs dense vs hybrid",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "search",
+      "language": "en",
+      "tags": [
+        "information-retrieval",
+        "ml"
+      ],
+      "popularity": 60
+    }
+  },
+  {
+    "id": "ir-colbert",
+    "title": "ColBERT",
+    "content": "Late interaction retrieval that keeps token-level vectors",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "search",
+      "language": "en",
+      "tags": [
+        "information-retrieval",
+        "ml"
+      ],
+      "popularity": 60
+    }
+  },
+  {
+    "id": "ir-splade",
+    "title": "SPLADE",
+    "content": "Learned sparse retrieval combining neural expansion with inverted indexes",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "search",
+      "language": "en",
+      "tags": [
+        "information-retrieval",
+        "ml"
+      ],
+      "popularity": 60
+    }
+  },
+  {
+    "id": "db-postgres",
+    "title": "PostgreSQL",
+    "content": "Relational database, JSONB, full text search, pgvector extension for embeddings",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "database",
+      "language": "en",
+      "tags": [
+        "infra",
+        "data"
+      ],
+      "popularity": 55
+    }
+  },
+  {
+    "id": "db-pgvector",
+    "title": "pgvector",
+    "content": "Postgres extension storing vectors and cosine/L2 distance operators",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "database",
+      "language": "en",
+      "tags": [
+        "infra",
+        "data"
+      ],
+      "popularity": 55
+    }
+  },
+  {
+    "id": "db-redis",
+    "title": "Redis",
+    "content": "In-memory cache and data structure store, used for search result caching",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "database",
+      "language": "en",
+      "tags": [
+        "infra",
+        "data"
+      ],
+      "popularity": 55
+    }
+  },
+  {
+    "id": "db-sqlite",
+    "title": "SQLite",
+    "content": "Embedded SQL database useful for tests and local fallback",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "database",
+      "language": "en",
+      "tags": [
+        "infra",
+        "data"
+      ],
+      "popularity": 55
+    }
+  },
+  {
+    "id": "db-opensearch",
+    "title": "OpenSearch",
+    "content": "Distributed search engine with BM25 and kNN",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "database",
+      "language": "en",
+      "tags": [
+        "infra",
+        "data"
+      ],
+      "popularity": 55
+    }
+  },
+  {
+    "id": "db-elasticsearch",
+    "title": "Elasticsearch",
+    "content": "Inverted index search platform, analyzers, aggregations",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "database",
+      "language": "en",
+      "tags": [
+        "infra",
+        "data"
+      ],
+      "popularity": 55
+    }
+  },
+  {
+    "id": "db-qdrant",
+    "title": "Qdrant",
+    "content": "Vector database with payload filters",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "database",
+      "language": "en",
+      "tags": [
+        "infra",
+        "data"
+      ],
+      "popularity": 55
+    }
+  },
+  {
+    "id": "db-milvus",
+    "title": "Milvus",
+    "content": "Scale-out vector database",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "database",
+      "language": "en",
+      "tags": [
+        "infra",
+        "data"
+      ],
+      "popularity": 55
+    }
+  },
+  {
+    "id": "obs-otel",
+    "title": "OpenTelemetry",
+    "content": "Traces and metrics standard for observing search latency spans",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "database",
+      "language": "en",
+      "tags": [
+        "infra",
+        "data"
+      ],
+      "popularity": 55
+    }
+  },
+  {
+    "id": "obs-prometheus",
+    "title": "Prometheus",
+    "content": "Metrics collection, histograms for p50 and p95 latency",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "database",
+      "language": "en",
+      "tags": [
+        "infra",
+        "data"
+      ],
+      "popularity": 55
+    }
+  },
+  {
+    "id": "lang-python",
+    "title": "Python",
+    "content": "Python is a language for backend APIs, data, and ML tooling including FastAPI",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "knowledge",
+      "language": "en",
+      "tags": [
+        "engineering"
+      ],
+      "popularity": 40
+    }
+  },
+  {
+    "id": "lang-typescript",
+    "title": "TypeScript",
+    "content": "Typed JavaScript used in Next.js dashboards and NestJS backends",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "knowledge",
+      "language": "en",
+      "tags": [
+        "engineering"
+      ],
+      "popularity": 40
+    }
+  },
+  {
+    "id": "lang-rust",
+    "title": "Rust",
+    "content": "Systems language with Axum and Actix web frameworks",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "knowledge",
+      "language": "en",
+      "tags": [
+        "engineering"
+      ],
+      "popularity": 40
+    }
+  },
+  {
+    "id": "lang-go",
+    "title": "Go",
+    "content": "Language for high concurrency backend services",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "knowledge",
+      "language": "en",
+      "tags": [
+        "engineering"
+      ],
+      "popularity": 40
+    }
+  },
+  {
+    "id": "sec-jwt",
+    "title": "JWT authentication",
+    "content": "JSON Web Tokens bind a user identity to a tenant_id for API authorization",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "knowledge",
+      "language": "en",
+      "tags": [
+        "engineering"
+      ],
+      "popularity": 40
+    }
+  },
+  {
+    "id": "sec-tenancy",
+    "title": "Multi-tenant search",
+    "content": "Every query must filter documents by tenant_id to prevent leakage",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "knowledge",
+      "language": "en",
+      "tags": [
+        "engineering"
+      ],
+      "popularity": 40
+    }
+  },
+  {
+    "id": "ml-embeddings",
+    "title": "Text embeddings",
+    "content": "Dense vectors from hashed n-grams or transformer models enable semantic search",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "knowledge",
+      "language": "en",
+      "tags": [
+        "engineering"
+      ],
+      "popularity": 40
+    }
+  },
+  {
+    "id": "ml-cosine",
+    "title": "Cosine similarity",
+    "content": "Cosine of two L2-normalized vectors is a standard dense retrieval score",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "knowledge",
+      "language": "en",
+      "tags": [
+        "engineering"
+      ],
+      "popularity": 40
+    }
+  },
+  {
+    "id": "prod-cache",
+    "title": "Search caching",
+    "content": "Redis stores query+filter+top_k keys so repeated searches skip retrieval",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "knowledge",
+      "language": "en",
+      "tags": [
+        "engineering"
+      ],
+      "popularity": 40
+    }
+  },
+  {
+    "id": "prod-fusion",
+    "title": "Score fusion",
+    "content": "Normalize BM25 and cosine then mix with configurable alpha",
+    "source": "demo-catalog",
+    "metadata": {
+      "category": "knowledge",
+      "language": "en",
+      "tags": [
+        "engineering"
+      ],
+      "popularity": 40
+    }
+  }
+]
