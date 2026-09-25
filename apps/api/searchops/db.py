@@ -15,7 +15,7 @@ def init_engine(url: str | None = None):
     global engine, SessionLocal
     settings = get_settings()
     database_url = url or settings.database_url
-    connect_args = {}
+    connect_args: dict = {}
     if database_url.startswith("sqlite"):
         connect_args = {"check_same_thread": False}
     elif database_url.startswith("postgres://"):
@@ -23,13 +23,19 @@ def init_engine(url: str | None = None):
     elif database_url.startswith("postgresql://") and not database_url.startswith("postgresql+asyncpg://"):
         database_url = database_url.replace("postgresql://", "postgresql+asyncpg://", 1)
     
-    # Clean query parameters for asyncpg if needed
-    if "postgresql+asyncpg://" in database_url and "channel_binding=" in database_url:
+    if "postgresql+asyncpg://" in database_url:
         import urllib.parse
         parsed = urllib.parse.urlparse(database_url)
         q = urllib.parse.parse_qs(parsed.query)
-        # asyncpg accepts ssl in connect_args or ssl parameter
+        
+        # asyncpg does not accept sslmode or channel_binding as query kwargs
+        sslmode = q.pop("sslmode", None)
+        ssl_arg = q.pop("ssl", None)
         q.pop("channel_binding", None)
+        
+        if sslmode or ssl_arg or "neon.tech" in parsed.netloc or "supabase.co" in parsed.netloc:
+            connect_args["ssl"] = True
+            
         new_query = urllib.parse.urlencode(q, doseq=True)
         database_url = urllib.parse.urlunparse(parsed._replace(query=new_query))
 
