@@ -11,36 +11,83 @@ from searchops.demo.seed import ensure_demo_data
 from searchops.evaluation.engine import EvaluationEngine
 
 
-async def cmd_seed() -> None:
+async def cmd_seed(provider: str | None = None) -> None:
     database.init_engine()
     await database.create_tables()
     assert database.SessionLocal is not None
     async with database.SessionLocal() as session:
+        if provider:
+            from searchops.config import get_settings
+            get_settings().embedding_provider = provider
         await ensure_demo_data(session)
-        print("Demo catalog seeded.")
+        print(f"Demo catalog seeded (provider={provider or 'default'}).")
 
 
-async def cmd_eval() -> None:
+async def reseed_catalog(session, tenant_id: str, provider: str) -> None:
+    from sqlalchemy import delete
+    from searchops.config import get_settings
+    from searchops.ingestion.service import IngestionService
+    from searchops.models import Chunk, Document
+    
+    get_settings().embedding_provider = provider
+    # Delete existing chunks and docs for demo tenant
+    await session.execute(delete(Chunk).where(Chunk.tenant_id == tenant_id))
+    await session.execute(delete(Document).where(Document.tenant_id == tenant_id))
+    await session.commit()
+    
+    service = IngestionService(session)
+    for item in build_catalog():
+        await service.ingest_text(
+            tenant_id=tenant_id,
+            title=item["title"],
+            content=item["content"],
+            source=item["source"],
+            metadata=item["metadata"],
+            document_id=item["id"],
+        )
+    await session.commit()
+
+
+async def cmd_eval(provider: str | None = None, reseed: bool = False) -> None:
     database.init_engine()
     await database.create_tables()
     assert database.SessionLocal is not None
     async with database.SessionLocal() as session:
-        await ensure_demo_data(session)
         from sqlalchemy import select
-
+        from searchops.config import get_settings
         from searchops.models import Tenant
 
+        if provider:
+            get_settings().embedding_provider = provider
+
+        await ensure_demo_data(session)
         tenant = (await session.execute(select(Tenant).where(Tenant.slug == "demo"))).scalar_one()
+        
+        if reseed and provider:
+            print(f"Re-ingesting catalog with {provider} embeddings...")
+            await reseed_catalog(session, tenant.id, provider)
+
         engine = EvaluationEngine(session)
         run = await engine.run(tenant.id)
+        print(f"\n--- Benchmark Results (Provider: {provider or get_settings().embedding_provider}) ---")
         print(engine.render(run))
-        out = Path(__file__).resolve().parents[2] / "evals" / "last_run.json"
-        # parents[2] from searchops/cli.py is apps/api; go to repo root
+        
         root = Path(__file__).resolve().parents[3]
-        out = root / "evals" / "last_run.json"
-        out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(json.dumps({"id": run.id, "metrics": run.metrics}, indent=2), encoding="utf-8")
-        print(f"\nWrote {out}")
+        evals_dir = root / "evals"
+        evals_dir.mkdir(parents=True, exist_ok=True)
+        
+        provider_name = provider or get_settings().embedding_provider
+        out_last = evals_dir / "last_run.json"
+        out_provider = evals_dir / f"{provider_name}_run.json"
+        
+        payload = {
+            "id": run.id,
+            "provider": provider_name,
+            "metrics": run.metrics,
+        }
+        out_last.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+        out_provider.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+        print(f"\nWrote {out_last} and {out_provider}")
 
 
 def export_catalog() -> None:
@@ -57,14 +104,20 @@ def export_catalog() -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(prog="searchops")
     sub = parser.add_subparsers(dest="command", required=True)
-    sub.add_parser("seed")
-    sub.add_parser("eval")
+    
+    seed_p = sub.add_parser("seed")
+    seed_p.add_argument("--provider", choices=["hashed", "huggingface", "mock"], default=None)
+    
+    eval_p = sub.add_parser("eval")
+    eval_p.add_argument("--provider", choices=["hashed", "huggingface", "mock"], default=None)
+    eval_p.add_argument("--reseed", action="store_true", help="Re-embed and re-ingest before eval")
+    
     sub.add_parser("export-catalog")
     args = parser.parse_args()
     if args.command == "seed":
-        asyncio.run(cmd_seed())
+        asyncio.run(cmd_seed(args.provider))
     elif args.command == "eval":
-        asyncio.run(cmd_eval())
+        asyncio.run(cmd_eval(args.provider, args.reseed))
     elif args.command == "export-catalog":
         export_catalog()
 

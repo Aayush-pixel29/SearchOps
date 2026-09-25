@@ -116,13 +116,4 @@ class EvaluationEngine:
 
     @staticmethod
     def render(run: EvaluationRun) -> str:
-        compact = {
-            method: {
-                "recall_at_10": row["recall_at_10"],
-                "mrr": row["mrr"],
-                "ndcg_at_10": row["ndcg_at_10"],
-                "p95_ms": row["p95_ms"],
-            }
-            for method, row in run.metrics.items()
-        }
-        return format_benchmark_table(compact)
+        return format_benchmark_table(run.metrics)

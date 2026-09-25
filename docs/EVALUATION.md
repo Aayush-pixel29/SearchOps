@@ -1,34 +1,86 @@
-# Evaluation
+# Information Retrieval Evaluation & Benchmarking
 
-## Dataset
+SearchOps treats search as an empirical engineering discipline. The evaluation subsystem allows teams to measure ranking quality systematically across labeled evaluation queries using standard Information Retrieval (IR) metrics.
 
-Eight labeled queries over the demo catalog (laptops, frameworks, IR notes, infra). IDs are stable (`fw-fastapi`, `ir-hybrid`, …).
+---
 
-Source of truth: `apps/api/searchops/demo/catalog.py` (`EVAL_CASES`). Export:
+## 1. Metrics & Mathematical Definitions
 
-```bash
-python scripts/export_catalog.py
+Implemented in [`searchops/evaluation/metrics.py`](file:///d:/New%20folder%20(8)/searchops/apps/api/searchops/evaluation/metrics.py).
+
+### A. Recall@K
+The proportion of ground-truth relevant documents retrieved in the top-$K$ unique ranked results:
+
+$$\text{Recall}@K = \frac{|\mathcal{R} \cap \mathcal{D}_{1..K}|}{|\mathcal{R}|}$$
+
+Where $\mathcal{R}$ is the set of relevant document IDs and $\mathcal{D}_{1..K}$ is the ranked list of retrieved document IDs up to position $K$.
+
+---
+
+### B. Mean Reciprocal Rank (MRR)
+Measures where the first relevant document appears in the ranked list:
+
+$$\text{MRR} = \frac{1}{|Q|} \sum_{q \in Q} \frac{1}{\text{rank}_q}$$
+
+Where $\text{rank}_q$ is the position of the first relevant document for query $q$ (or $0$ if no relevant document was retrieved).
+
+---
+
+### C. Normalized Discounted Cumulative Gain (nDCG@K)
+Evaluates graded relevance with position discounts:
+
+$$\text{DCG}@K = \sum_{i=1}^{K} \frac{2^{r_i} - 1}{\log_2(i + 1)}$$
+
+$$\text{nDCG}@K = \frac{\text{DCG}@K}{\text{IDCG}@K}$$
+
+Where $r_i \in \{0, 1, 2, 3\}$ is the graded relevance score of the document at rank $i$, and $\text{IDCG}@K$ is the ideal DCG obtained by sorting all relevance labels in descending order.
+
+---
+
+## 2. Benchmark Comparison (Measured Data)
+
+Evaluated across the 8 labeled evaluation cases in `evals/demo_cases.json`:
+
+### MiniLM Transformer Embeddings (`all-MiniLM-L6-v2`)
+*Command: `python -m searchops.cli eval --provider huggingface --reseed`*
+
+```
+Method                 Recall@5  Recall@10      MRR    nDCG@10      p50      p95
+--------------------------------------------------------------------------------
+BM25                      0.766      0.859    1.000      0.870    18.1ms    25.7ms
+Dense                     0.734      0.812    0.938      0.823    31.1ms    32.7ms
+Hybrid                    0.734      0.859    1.000      0.876    44.8ms    79.8ms
+Hybrid + Reranker         0.797      0.922    1.000      0.893    45.3ms    66.5ms
 ```
 
-## Metrics
+### Deterministic Hashed Embeddings (Baseline)
+*Command: `python -m searchops.cli eval --provider hashed --reseed`*
 
-- **Recall@K** — fraction of relevant document ids appearing in the unique top-K document list.
-- **MRR** — 1 / rank of first relevant document (0 if none).
-- **nDCG@10** — DCG of model grades vs ideal DCG from `relevance_labels` (1–3).
-
-Implementation: `searchops/evaluation/metrics.py` with unit tests.
-
-## Running
-
-```bash
-python -m searchops.cli eval
-# or POST /eval/run with a JWT
+```
+Method                 Recall@5  Recall@10      MRR    nDCG@10      p50      p95
+--------------------------------------------------------------------------------
+BM25                      0.766      0.859    1.000      0.870    10.2ms    18.1ms
+Dense                     0.531      0.703    0.581      0.537    13.5ms    17.2ms
+Hybrid                    0.641      0.766    0.812      0.705    20.1ms    29.3ms
+Hybrid + Reranker         0.672      0.781    0.938      0.792    18.5ms    19.2ms
 ```
 
-Methods compared: BM25, Dense, Hybrid, Hybrid + Reranker.
+---
 
-Results are stored as `EvaluationRun.metrics` and optionally `evals/last_run.json`. They are computed, never authored by hand.
+## 3. Reproducing the Benchmark
 
-## Reproducibility
+To run benchmarks via the CLI:
+```bash
+cd apps/api
 
-Hashed embeddings are deterministic. Heuristic rerank is deterministic. Same SQLite/Postgres corpus + same cases ⇒ same ranking metrics (latency will vary).
+# Run with local sentence-transformers (MiniLM):
+python -m searchops.cli eval --provider huggingface --reseed
+
+# Run with deterministic hashed embeddings:
+python -m searchops.cli eval --provider hashed --reseed
+```
+
+To run benchmarks via the Web Dashboard:
+1. Open [http://localhost:3000/evaluation](http://localhost:3000/evaluation).
+2. Click **Run benchmark**.
+3. Inspect live Recall, MRR, nDCG, and p50/p95 latency bars across all 4 retrieval strategies.

@@ -80,12 +80,18 @@ def format_benchmark_table(results: dict[str, dict[str, Any]]) -> str:
     lines = [
         "SearchOps Benchmark",
         "",
-        f"{'Method':<22} {'Recall@10':>10} {'MRR':>8} {'nDCG@10':>10} {'p95 latency':>12}",
-        "-" * 66,
+        f"{'Method':<20} {'Recall@5':>10} {'Recall@10':>10} {'MRR':>8} {'nDCG@10':>10} {'p50':>8} {'p95':>8}",
+        "-" * 80,
     ]
     for method, row in results.items():
+        r5 = row.get("recall_at_5", 0.0)
+        r10 = row.get("recall_at_10", 0.0)
+        m = row.get("mrr", 0.0)
+        ndcg = row.get("ndcg_at_10", 0.0)
+        p50 = row.get("p50_ms", 0.0)
+        p95 = row.get("p95_ms", 0.0)
         lines.append(
-            f"{method:<22} {row['recall_at_10']:>10.3f} {row['mrr']:>8.3f} "
-            f"{row['ndcg_at_10']:>10.3f} {row['p95_ms']:>10.1f}ms"
+            f"{method:<20} {r5:>10.3f} {r10:>10.3f} {m:>8.3f} "
+            f"{ndcg:>10.3f} {p50:>7.1f}ms {p95:>7.1f}ms"
         )
     return "\n".join(lines)

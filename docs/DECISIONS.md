@@ -1,29 +1,39 @@
-# Decisions
+# Architecture Decision Records (ADRs) & Engineering Tradeoffs
 
-## Hashed embeddings as default
+This document outlines key architectural decisions, rationale, and explicit engineering tradeoffs made in SearchOps.
 
-CI and first-run demos must work without API keys. Hashing trick embeddings are weak semantically but deterministic. Provider remains an interface.
+---
 
-## SQLite for tests, Postgres for compose
+### ADR 01: Hashed N-Gram Embeddings as Default Baseline
+- **Decision**: Use a deterministic 384-dimensional hashed n-gram embedding algorithm as the default zero-config provider.
+- **Rationale**: Enables instant offline execution, predictable testing, and GitHub Actions CI without requiring paid cloud API keys or downloading massive models during initial setup.
+- **Tradeoff**: Hashed vectors lack true semantic deep learning representation (which is why dense retrieval underperforms BM25 under this provider). To achieve full semantic quality, developers can swap `EMBEDDING_PROVIDER=huggingface` (`all-MiniLM-L6-v2`) or cloud providers.
 
-Tests should not require Docker. The domain model is the same. pgvector ANN is intentionally not required for correctness of cosine ranking on <1k chunks.
+---
 
-## Linear fusion, not RRF, as the first hybrid
+### ADR 02: Linear Convex Fusion vs. Reciprocal Rank Fusion (RRF)
+- **Decision**: Implement min-max normalized linear convex combination ($\alpha$-fusion) as the primary hybrid search mechanism.
+- **Rationale**: Linear $\alpha$-fusion yields directly interpretable continuous scores ($s \in [0, 1]$) that can be clearly decomposed and audited in the SearchOps Ranking Inspector.
+- **Tradeoff**: Min-max normalization is sensitive to outlier scores in sparse BM25 lists. RRF is less sensitive to score distributions but discards relative score magnitudes.
 
-Linear alpha is easier to explain in the inspector (`alpha * dense + (1-alpha) * keyword`). Reciprocal rank fusion is a follow-up experiment, not the baseline.
+---
 
-## Heuristic reranker as the local cross-encoder stand-in
+### ADR 03: Fail-Open Resilience Patterns
+- **Decision**:
+  1. **Redis Cache Fallback**: If Redis is unreachable or crashes, the system transparently falls back to an in-memory TTL dictionary cache without raising an exception.
+  2. **Reranker Fallback**: If an advanced Cross-Encoder or neural reranker fails (e.g. CUDA OOM or network timeout), the pipeline falls back to hybrid ranking and records `noop_fallback` in the telemetry trace.
+- **Rationale**: Search retrieval in production systems must prioritize uptime and availability over non-critical enhancements.
 
-A 22M cross-encoder is optional. Shipping a broken default that downloads 100MB on `pytest` would make the repo hostile. The heuristic is documented as a stand-in; traces record which reranker ran.
+---
 
-## Tenant on every row
+### ADR 04: Multi-Tenant Partitioning at Storage Layer
+- **Decision**: Every document, chunk, query log, evaluation case, and trace explicitly carries a foreign key `tenant_id`. All database queries strictly filter by `tenant_id`.
+- **Rationale**: Prevents accidental data leaks across different corporate or application tenants.
+- **Tradeoff**: Requires passing tenant context through all repository queries rather than relying purely on global indices.
 
-`tenant_id` on documents, chunks, queries, evals, traces. Tokens carry `tenant_id`. Tests assert cross-tenant search cannot see foreign titles.
+---
 
-## JWT + PBKDF2, not OAuth
-
-The goal is authorization wiring, not IAM. Email/password + signed JWT is enough to protect routes.
-
-## In-process metrics
-
-Prometheus is the right next step. A ring buffer is enough to populate the Performance page and traces without extra containers in the default path.
+### ADR 05: Database Portability (Async SQLite & PostgreSQL pgvector)
+- **Decision**: Support both async SQLite (`sqlite+aiosqlite`) for local development/testing and PostgreSQL (`postgresql+asyncpg`) for containerized production.
+- **Rationale**: Allows developers to run tests in seconds without requiring Docker, while preserving the exact same SQLAlchemy data models in production.
+- **Tradeoff**: In SQLite mode, vector similarity is computed via in-memory NumPy cosine dot products across the tenant chunks rather than database-native vector index ANN. For production scale (>100k chunks per tenant), pgvector HNSW/IVFFlat indexing is recommended.

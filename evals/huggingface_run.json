@@ -1,14 +1,14 @@
 {
-  "id": "8f27b3f8-98fc-4259-873a-25eb58f4ad1b",
-  "provider": "hashed",
+  "id": "3077b4aa-1dae-4502-9e58-1827be198366",
+  "provider": "huggingface",
   "metrics": {
     "BM25": {
       "recall_at_5": 0.765625,
       "recall_at_10": 0.859375,
       "mrr": 1.0,
       "ndcg_at_10": 0.8696238220442503,
-      "p50_ms": 10.1570000006177,
-      "p95_ms": 18.101500001648674,
+      "p50_ms": 18.11730000190437,
+      "p95_ms": 25.729699998919386,
       "n_queries": 8,
       "details": [
         {
@@ -228,258 +228,33 @@
       ]
     },
     "Dense": {
-      "recall_at_5": 0.53125,
-      "recall_at_10": 0.703125,
-      "mrr": 0.58125,
-      "ndcg_at_10": 0.536643292305454,
-      "p50_ms": 13.455100001010578,
-      "p95_ms": 17.179000002215616,
+      "recall_at_5": 0.734375,
+      "recall_at_10": 0.8125,
+      "mrr": 0.9375,
+      "ndcg_at_10": 0.8227439120734282,
+      "p50_ms": 31.118800001422642,
+      "p95_ms": 32.66100000109873,
       "n_queries": 8,
       "details": [
         {
           "query": "best python backend framework",
           "metrics": {
-            "recall_at_5": 0.5,
-            "recall_at_10": 1.0,
-            "mrr": 0.25,
-            "ndcg_at_10": 0.5301483103776944
-          },
-          "ranked": [
-            "fw-laravel",
-            "fw-nestjs",
-            "fw-spring",
-            "fw-fastapi",
-            "fw-django",
-            "fw-litestar",
-            "fw-sveltekit",
-            "fw-flask",
-            "fw-actix",
-            "fw-rails"
-          ],
-          "relevant": [
-            "fw-fastapi",
-            "fw-django",
-            "fw-flask",
-            "fw-litestar"
-          ]
-        },
-        {
-          "query": "lightweight laptops for programming under 80000 with 16GB RAM",
-          "metrics": {
-            "recall_at_5": 0.25,
-            "recall_at_10": 0.625,
-            "mrr": 1.0,
-            "ndcg_at_10": 0.680705946272028
-          },
-          "ranked": [
-            "laptop-thinkpad-e14",
-            "laptop-lenovo-loq",
-            "laptop-yoga-slim",
-            "laptop-dell-g15",
-            "laptop-hp-victus",
-            "laptop-honor-magicbook",
-            "laptop-macbook-air-m2",
-            "laptop-asus-vivobook-16",
-            "laptop-samsung-galaxy-book",
-            "laptop-lg-gram"
-          ],
-          "relevant": [
-            "laptop-acer-swift-go",
-            "laptop-hp-pavilion",
-            "laptop-asus-vivobook-16",
-            "laptop-thinkpad-e14",
-            "laptop-yoga-slim",
-            "laptop-samsung-galaxy-book",
-            "laptop-honor-magicbook",
-            "laptop-msi-modern"
-          ]
-        },
-        {
-          "query": "hybrid search bm25 dense fusion",
-          "metrics": {
-            "recall_at_5": 0.25,
-            "recall_at_10": 0.5,
-            "mrr": 0.2,
-            "ndcg_at_10": 0.32417244004066814
-          },
-          "ranked": [
-            "ir-rag-limits",
-            "ir-ann",
-            "db-opensearch",
-            "ml-embeddings",
-            "ir-hybrid",
-            "db-elasticsearch",
-            "ir-splade",
-            "db-pgvector",
-            "obs-otel",
-            "prod-fusion"
-          ],
-          "relevant": [
-            "ir-hybrid",
-            "ir-bm25",
-            "ir-dense",
-            "prod-fusion"
-          ]
-        },
-        {
-          "query": "how to evaluate ranking with ndcg and mrr",
-          "metrics": {
-            "recall_at_5": 0.0,
-            "recall_at_10": 0.0,
-            "mrr": 0.0,
-            "ndcg_at_10": 0.0
-          },
-          "ranked": [
-            "fw-fastapi",
-            "fw-litestar",
-            "lang-rust",
-            "fw-actix",
-            "fw-axum",
-            "fw-remix",
-            "fw-laravel",
-            "fw-nestjs",
-            "ir-query-parse",
-            "fw-nextjs"
-          ],
-          "relevant": [
-            "ir-ndcg",
-            "ir-mrr",
-            "ir-recall",
-            "ir-eval"
-          ]
-        },
-        {
-          "query": "postgres pgvector embeddings cosine search",
-          "metrics": {
-            "recall_at_5": 0.75,
-            "recall_at_10": 1.0,
-            "mrr": 1.0,
-            "ndcg_at_10": 0.7832091906452314
-          },
-          "ranked": [
-            "ir-dense",
-            "db-postgres",
-            "ir-hybrid",
-            "db-pgvector",
-            "prod-fusion",
-            "ir-chunking",
-            "ml-embeddings",
-            "ir-ann",
-            "ir-rag-limits",
-            "db-milvus"
-          ],
-          "relevant": [
-            "db-postgres",
-            "db-pgvector",
-            "ir-dense",
-            "ml-embeddings"
-          ]
-        },
-        {
-          "query": "redis cache repeated search queries",
-          "metrics": {
             "recall_at_5": 1.0,
             "recall_at_10": 1.0,
             "mrr": 1.0,
-            "ndcg_at_10": 1.0
+            "ndcg_at_10": 0.7542537123702604
           },
           "ranked": [
-            "db-redis",
-            "prod-cache",
-            "ir-ann",
-            "ir-dense",
-            "fw-django",
-            "db-elasticsearch",
-            "db-opensearch",
-            "ir-colbert",
-            "obs-otel",
-            "ir-query-parse"
-          ],
-          "relevant": [
-            "db-redis",
-            "prod-cache"
-          ]
-        },
-        {
-          "query": "cross encoder reranker for search results",
-          "metrics": {
-            "recall_at_5": 0.5,
-            "recall_at_10": 0.5,
-            "mrr": 0.2,
-            "ndcg_at_10": 0.33304551050294506
-          },
-          "ranked": [
-            "obs-otel",
-            "db-postgres",
-            "db-redis",
-            "ir-dense",
-            "ir-rerank",
-            "db-elasticsearch",
-            "db-opensearch",
-            "obs-prometheus",
-            "db-sqlite",
-            "ir-ndcg"
-          ],
-          "relevant": [
-            "ir-rerank",
-            "ir-hybrid"
-          ]
-        },
-        {
-          "query": "tenant isolation for search api",
-          "metrics": {
-            "recall_at_5": 1.0,
-            "recall_at_10": 1.0,
-            "mrr": 1.0,
-            "ndcg_at_10": 0.641864940605065
-          },
-          "ranked": [
-            "sec-jwt",
-            "db-redis",
-            "obs-otel",
-            "db-postgres",
-            "sec-tenancy",
-            "laptop-hp-victus",
-            "laptop-macbook-air-m1",
-            "db-elasticsearch",
-            "lang-go",
-            "db-opensearch"
-          ],
-          "relevant": [
-            "sec-tenancy",
-            "sec-jwt"
-          ]
-        }
-      ]
-    },
-    "Hybrid": {
-      "recall_at_5": 0.640625,
-      "recall_at_10": 0.765625,
-      "mrr": 0.8125,
-      "ndcg_at_10": 0.7052147012785991,
-      "p50_ms": 20.1491999978316,
-      "p95_ms": 29.327600001124665,
-      "n_queries": 8,
-      "details": [
-        {
-          "query": "best python backend framework",
-          "metrics": {
-            "recall_at_5": 0.75,
-            "recall_at_10": 1.0,
-            "mrr": 0.5,
-            "ndcg_at_10": 0.6571802539082778
-          },
-          "ranked": [
-            "fw-laravel",
-            "fw-django",
-            "fw-nestjs",
-            "fw-fastapi",
-            "fw-litestar",
-            "fw-spring",
             "fw-flask",
-            "fw-sveltekit",
             "lang-python",
-            "fw-actix"
+            "fw-django",
+            "fw-fastapi",
+            "fw-litestar",
+            "lang-go",
+            "fw-starlette",
+            "fw-express",
+            "fw-actix",
+            "fw-laravel"
           ],
           "relevant": [
             "fw-fastapi",
@@ -492,21 +267,21 @@
           "query": "lightweight laptops for programming under 80000 with 16GB RAM",
           "metrics": {
             "recall_at_5": 0.375,
-            "recall_at_10": 0.625,
+            "recall_at_10": 0.75,
             "mrr": 1.0,
-            "ndcg_at_10": 0.7161292126375145
+            "ndcg_at_10": 0.7125414337569395
           },
           "ranked": [
-            "laptop-thinkpad-e14",
             "laptop-yoga-slim",
-            "laptop-lenovo-loq",
-            "laptop-hp-victus",
-            "laptop-honor-magicbook",
-            "laptop-macbook-air-m2",
-            "laptop-dell-g15",
+            "laptop-thinkpad-e14",
             "laptop-asus-vivobook-16",
-            "laptop-lg-gram",
-            "laptop-samsung-galaxy-book"
+            "laptop-hp-victus",
+            "laptop-dell-inspiron",
+            "laptop-chromebook",
+            "laptop-lenovo-loq",
+            "laptop-hp-pavilion",
+            "laptop-msi-modern",
+            "laptop-honor-magicbook"
           ],
           "relevant": [
             "laptop-acer-swift-go",
@@ -522,22 +297,22 @@
         {
           "query": "hybrid search bm25 dense fusion",
           "metrics": {
-            "recall_at_5": 0.25,
-            "recall_at_10": 0.75,
+            "recall_at_5": 0.5,
+            "recall_at_10": 0.5,
             "mrr": 0.5,
-            "ndcg_at_10": 0.5382763192988862
+            "ndcg_at_10": 0.5091500669982014
           },
           "ranked": [
-            "ir-rag-limits",
-            "ir-hybrid",
             "db-opensearch",
-            "ir-ann",
-            "ml-embeddings",
+            "ir-hybrid",
+            "ir-rag-limits",
             "prod-fusion",
+            "ir-ann",
+            "ir-splade",
+            "ml-embeddings",
+            "prod-cache",
             "db-elasticsearch",
-            "ir-bm25",
-            "obs-otel",
-            "db-postgres"
+            "ml-cosine"
           ],
           "relevant": [
             "ir-hybrid",
@@ -549,22 +324,22 @@
         {
           "query": "how to evaluate ranking with ndcg and mrr",
           "metrics": {
-            "recall_at_5": 0.25,
-            "recall_at_10": 0.25,
-            "mrr": 0.5,
-            "ndcg_at_10": 0.31083481571321947
+            "recall_at_5": 0.75,
+            "recall_at_10": 0.75,
+            "mrr": 1.0,
+            "ndcg_at_10": 0.8944296728234234
           },
           "ranked": [
-            "fw-litestar",
+            "ir-mrr",
             "ir-ndcg",
-            "fw-fastapi",
-            "lang-rust",
-            "db-opensearch",
-            "fw-laravel",
-            "fw-axum",
-            "fw-remix",
-            "ir-query-parse",
-            "fw-actix"
+            "ir-rerank",
+            "ir-eval",
+            "ir-bm25",
+            "ir-hybrid",
+            "ir-rag-limits",
+            "ml-cosine",
+            "db-elasticsearch",
+            "obs-prometheus"
           ],
           "relevant": [
             "ir-ndcg",
@@ -576,22 +351,22 @@
         {
           "query": "postgres pgvector embeddings cosine search",
           "metrics": {
-            "recall_at_5": 1.0,
+            "recall_at_5": 0.75,
             "recall_at_10": 1.0,
             "mrr": 1.0,
-            "ndcg_at_10": 0.8274575787813458
+            "ndcg_at_10": 0.850666254954954
           },
           "ranked": [
             "ir-dense",
-            "db-postgres",
             "db-pgvector",
-            "ir-hybrid",
-            "ml-embeddings",
-            "prod-fusion",
+            "db-postgres",
+            "ml-cosine",
             "ir-ann",
-            "ir-chunking",
-            "ir-rag-limits",
-            "db-elasticsearch"
+            "ml-embeddings",
+            "ir-colbert",
+            "ir-splade",
+            "ir-rerank",
+            "db-qdrant"
           ],
           "relevant": [
             "db-postgres",
@@ -609,16 +384,16 @@
             "ndcg_at_10": 1.0
           },
           "ranked": [
-            "db-redis",
             "prod-cache",
-            "ir-dense",
-            "ir-ann",
-            "db-elasticsearch",
-            "db-opensearch",
-            "ir-eval",
-            "fw-django",
+            "db-redis",
             "obs-otel",
-            "ir-rag-limits"
+            "db-opensearch",
+            "db-elasticsearch",
+            "ir-rag-limits",
+            "ir-splade",
+            "sec-tenancy",
+            "db-qdrant",
+            "ir-dense"
           ],
           "relevant": [
             "db-redis",
@@ -635,15 +410,15 @@
           },
           "ranked": [
             "ir-rerank",
-            "obs-otel",
             "ir-dense",
-            "db-postgres",
-            "db-redis",
             "db-elasticsearch",
             "db-opensearch",
-            "obs-prometheus",
-            "db-sqlite",
-            "ir-rag-limits"
+            "ir-ndcg",
+            "ml-embeddings",
+            "ir-splade",
+            "ir-eval",
+            "db-postgres",
+            "ml-cosine"
           ],
           "relevant": [
             "ir-rerank",
@@ -656,19 +431,19 @@
             "recall_at_5": 1.0,
             "recall_at_10": 1.0,
             "mrr": 1.0,
-            "ndcg_at_10": 0.7309292742059024
+            "ndcg_at_10": 1.0
           },
           "ranked": [
-            "sec-jwt",
-            "db-redis",
             "sec-tenancy",
-            "obs-otel",
-            "db-postgres",
-            "db-elasticsearch",
-            "lang-go",
+            "sec-jwt",
             "db-opensearch",
-            "laptop-macbook-air-m1",
-            "ir-dense"
+            "db-elasticsearch",
+            "ir-dense",
+            "db-redis",
+            "db-postgres",
+            "prod-cache",
+            "ir-rag-limits",
+            "db-pgvector"
           ],
           "relevant": [
             "sec-tenancy",
@@ -677,34 +452,34 @@
         }
       ]
     },
-    "Hybrid + Reranker": {
-      "recall_at_5": 0.671875,
-      "recall_at_10": 0.78125,
-      "mrr": 0.9375,
-      "ndcg_at_10": 0.792078738999832,
-      "p50_ms": 18.52349999899161,
-      "p95_ms": 19.211300001188647,
+    "Hybrid": {
+      "recall_at_5": 0.734375,
+      "recall_at_10": 0.859375,
+      "mrr": 1.0,
+      "ndcg_at_10": 0.876130989076048,
+      "p50_ms": 44.83450000043376,
+      "p95_ms": 79.81120000113151,
       "n_queries": 8,
       "details": [
         {
           "query": "best python backend framework",
           "metrics": {
-            "recall_at_5": 0.75,
+            "recall_at_5": 1.0,
             "recall_at_10": 1.0,
             "mrr": 1.0,
-            "ndcg_at_10": 0.9581881067582406
+            "ndcg_at_10": 0.8148348199325779
           },
           "ranked": [
+            "fw-flask",
             "fw-django",
+            "lang-python",
             "fw-fastapi",
             "fw-litestar",
+            "fw-express",
+            "fw-actix",
             "fw-laravel",
-            "fw-nestjs",
-            "fw-flask",
-            "fw-spring",
-            "lang-python",
-            "fw-sveltekit",
-            "fw-actix"
+            "fw-starlette",
+            "lang-go"
           ],
           "relevant": [
             "fw-fastapi",
@@ -717,20 +492,245 @@
           "query": "lightweight laptops for programming under 80000 with 16GB RAM",
           "metrics": {
             "recall_at_5": 0.375,
-            "recall_at_10": 0.5,
+            "recall_at_10": 0.625,
             "mrr": 1.0,
-            "ndcg_at_10": 0.6227343827405363
+            "ndcg_at_10": 0.6712730671918422
           },
           "ranked": [
+            "laptop-yoga-slim",
+            "laptop-thinkpad-e14",
+            "laptop-hp-victus",
+            "laptop-asus-vivobook-16",
+            "laptop-lenovo-loq",
+            "laptop-macbook-air-m2",
+            "laptop-honor-magicbook",
+            "laptop-msi-modern",
+            "laptop-lg-gram",
+            "laptop-acer-aspire-5"
+          ],
+          "relevant": [
+            "laptop-acer-swift-go",
+            "laptop-hp-pavilion",
+            "laptop-asus-vivobook-16",
             "laptop-thinkpad-e14",
             "laptop-yoga-slim",
-            "laptop-hp-victus",
-            "laptop-lenovo-loq",
+            "laptop-samsung-galaxy-book",
             "laptop-honor-magicbook",
-            "laptop-macbook-air-m2",
-            "laptop-lg-gram",
+            "laptop-msi-modern"
+          ]
+        },
+        {
+          "query": "hybrid search bm25 dense fusion",
+          "metrics": {
+            "recall_at_5": 0.5,
+            "recall_at_10": 1.0,
+            "mrr": 1.0,
+            "ndcg_at_10": 0.8187894484089957
+          },
+          "ranked": [
+            "ir-hybrid",
+            "ir-rag-limits",
+            "db-opensearch",
+            "prod-fusion",
+            "ml-embeddings",
+            "ir-dense",
+            "ir-ann",
+            "db-elasticsearch",
+            "ml-cosine",
+            "ir-bm25"
+          ],
+          "relevant": [
+            "ir-hybrid",
+            "ir-bm25",
+            "ir-dense",
+            "prod-fusion"
+          ]
+        },
+        {
+          "query": "how to evaluate ranking with ndcg and mrr",
+          "metrics": {
+            "recall_at_5": 0.75,
+            "recall_at_10": 0.75,
+            "mrr": 1.0,
+            "ndcg_at_10": 0.8944296728234234
+          },
+          "ranked": [
+            "ir-ndcg",
+            "ir-mrr",
+            "ir-bm25",
+            "ir-eval",
+            "ir-rerank",
+            "ir-rag-limits",
+            "ir-hybrid",
+            "db-opensearch",
+            "ml-cosine",
+            "obs-prometheus"
+          ],
+          "relevant": [
+            "ir-ndcg",
+            "ir-mrr",
+            "ir-recall",
+            "ir-eval"
+          ]
+        },
+        {
+          "query": "postgres pgvector embeddings cosine search",
+          "metrics": {
+            "recall_at_5": 0.75,
+            "recall_at_10": 1.0,
+            "mrr": 1.0,
+            "ndcg_at_10": 0.9488107485678985
+          },
+          "ranked": [
+            "db-pgvector",
+            "ir-dense",
+            "db-postgres",
+            "ir-ann",
+            "ml-cosine",
+            "ml-embeddings",
+            "ir-chunking",
+            "ir-colbert",
+            "db-elasticsearch",
+            "prod-cache"
+          ],
+          "relevant": [
+            "db-postgres",
+            "db-pgvector",
+            "ir-dense",
+            "ml-embeddings"
+          ]
+        },
+        {
+          "query": "redis cache repeated search queries",
+          "metrics": {
+            "recall_at_5": 1.0,
+            "recall_at_10": 1.0,
+            "mrr": 1.0,
+            "ndcg_at_10": 1.0
+          },
+          "ranked": [
+            "prod-cache",
+            "db-redis",
+            "ir-dense",
+            "obs-otel",
+            "db-opensearch",
+            "db-elasticsearch",
+            "ir-rag-limits",
+            "ir-eval",
+            "sec-tenancy",
+            "db-postgres"
+          ],
+          "relevant": [
+            "db-redis",
+            "prod-cache"
+          ]
+        },
+        {
+          "query": "cross encoder reranker for search results",
+          "metrics": {
+            "recall_at_5": 0.5,
+            "recall_at_10": 0.5,
+            "mrr": 1.0,
+            "ndcg_at_10": 0.8609101556836468
+          },
+          "ranked": [
+            "ir-rerank",
+            "ir-dense",
+            "db-postgres",
+            "db-elasticsearch",
+            "db-opensearch",
+            "ml-embeddings",
+            "db-redis",
+            "ir-rag-limits",
+            "obs-otel",
+            "prod-cache"
+          ],
+          "relevant": [
+            "ir-rerank",
+            "ir-hybrid"
+          ]
+        },
+        {
+          "query": "tenant isolation for search api",
+          "metrics": {
+            "recall_at_5": 1.0,
+            "recall_at_10": 1.0,
+            "mrr": 1.0,
+            "ndcg_at_10": 1.0
+          },
+          "ranked": [
+            "sec-tenancy",
+            "sec-jwt",
+            "db-opensearch",
+            "db-redis",
+            "ir-dense",
+            "db-postgres",
+            "db-elasticsearch",
+            "obs-otel",
+            "prod-cache",
+            "ir-rag-limits"
+          ],
+          "relevant": [
+            "sec-tenancy",
+            "sec-jwt"
+          ]
+        }
+      ]
+    },
+    "Hybrid + Reranker": {
+      "recall_at_5": 0.796875,
+      "recall_at_10": 0.921875,
+      "mrr": 1.0,
+      "ndcg_at_10": 0.8930135482820839,
+      "p50_ms": 45.300999998289626,
+      "p95_ms": 66.50870000157738,
+      "n_queries": 8,
+      "details": [
+        {
+          "query": "best python backend framework",
+          "metrics": {
+            "recall_at_5": 1.0,
+            "recall_at_10": 1.0,
+            "mrr": 1.0,
+            "ndcg_at_10": 0.857090307044497
+          },
+          "ranked": [
+            "fw-flask",
+            "fw-django",
+            "fw-fastapi",
+            "fw-litestar",
+            "lang-python",
+            "fw-express",
+            "fw-actix",
+            "fw-laravel",
+            "fw-starlette",
+            "fw-nestjs"
+          ],
+          "relevant": [
+            "fw-fastapi",
+            "fw-django",
+            "fw-flask",
+            "fw-litestar"
+          ]
+        },
+        {
+          "query": "lightweight laptops for programming under 80000 with 16GB RAM",
+          "metrics": {
+            "recall_at_5": 0.375,
+            "recall_at_10": 0.625,
+            "mrr": 1.0,
+            "ndcg_at_10": 0.6693405013409212
+          },
+          "ranked": [
+            "laptop-yoga-slim",
+            "laptop-thinkpad-e14",
+            "laptop-hp-victus",
             "laptop-asus-vivobook-16",
-            "laptop-dell-g15",
+            "laptop-lenovo-loq",
+            "laptop-macbook-air-m2",
+            "laptop-honor-magicbook",
+            "laptop-lg-gram",
+            "laptop-msi-modern",
             "laptop-framework-13"
           ],
           "relevant": [
@@ -747,22 +747,22 @@
         {
           "query": "hybrid search bm25 dense fusion",
           "metrics": {
-            "recall_at_5": 0.5,
+            "recall_at_5": 0.75,
             "recall_at_10": 1.0,
-            "mrr": 0.5,
-            "ndcg_at_10": 0.6395398605123139
+            "mrr": 1.0,
+            "ndcg_at_10": 0.8388892146739186
           },
           "ranked": [
-            "ir-rag-limits",
             "ir-hybrid",
+            "ir-rag-limits",
             "db-opensearch",
             "prod-fusion",
-            "ir-ann",
-            "ml-embeddings",
-            "ir-bm25",
-            "db-elasticsearch",
             "ir-dense",
-            "obs-otel"
+            "ir-bm25",
+            "ml-embeddings",
+            "db-elasticsearch",
+            "prod-cache",
+            "ir-ann"
           ],
           "relevant": [
             "ir-hybrid",
@@ -774,22 +774,22 @@
         {
           "query": "how to evaluate ranking with ndcg and mrr",
           "metrics": {
-            "recall_at_5": 0.25,
-            "recall_at_10": 0.25,
+            "recall_at_5": 0.75,
+            "recall_at_10": 0.75,
             "mrr": 1.0,
-            "ndcg_at_10": 0.492661526824024
+            "ndcg_at_10": 0.8851766973950987
           },
           "ranked": [
             "ir-ndcg",
-            "fw-litestar",
-            "lang-rust",
-            "fw-fastapi",
+            "ir-mrr",
             "ir-bm25",
-            "ir-query-parse",
+            "ir-rerank",
+            "ir-eval",
             "db-opensearch",
-            "fw-laravel",
-            "fw-axum",
-            "prod-fusion"
+            "ir-rag-limits",
+            "ir-hybrid",
+            "ir-query-parse",
+            "db-pgvector"
           ],
           "relevant": [
             "ir-ndcg",
@@ -804,19 +804,19 @@
             "recall_at_5": 1.0,
             "recall_at_10": 1.0,
             "mrr": 1.0,
-            "ndcg_at_10": 0.9286046470817456
+            "ndcg_at_10": 0.9888925979887605
           },
           "ranked": [
+            "db-pgvector",
             "db-postgres",
             "ir-dense",
-            "db-pgvector",
-            "ir-hybrid",
-            "ml-embeddings",
             "ir-ann",
-            "ir-rag-limits",
+            "ml-embeddings",
+            "ml-cosine",
+            "db-elasticsearch",
             "ir-chunking",
-            "prod-fusion",
-            "db-elasticsearch"
+            "prod-cache",
+            "ir-hybrid"
           ],
           "relevant": [
             "db-postgres",
@@ -834,16 +834,16 @@
             "ndcg_at_10": 1.0
           },
           "ranked": [
-            "db-redis",
             "prod-cache",
+            "db-redis",
             "ir-dense",
-            "ir-ann",
-            "db-elasticsearch",
-            "db-opensearch",
             "ir-rag-limits",
-            "ir-eval",
+            "db-opensearch",
+            "db-elasticsearch",
             "sec-tenancy",
-            "obs-otel"
+            "obs-otel",
+            "ir-eval",
+            "ir-hybrid"
           ],
           "relevant": [
             "db-redis",
@@ -854,21 +854,21 @@
           "query": "cross encoder reranker for search results",
           "metrics": {
             "recall_at_5": 0.5,
-            "recall_at_10": 0.5,
+            "recall_at_10": 1.0,
             "mrr": 1.0,
-            "ndcg_at_10": 0.8609101556836468
+            "ndcg_at_10": 0.9047190678134756
           },
           "ranked": [
             "ir-rerank",
             "ir-dense",
-            "obs-otel",
-            "db-postgres",
-            "db-redis",
+            "ir-rag-limits",
             "db-elasticsearch",
             "db-opensearch",
-            "ir-rag-limits",
-            "obs-prometheus",
-            "db-sqlite"
+            "ir-hybrid",
+            "db-postgres",
+            "prod-cache",
+            "db-redis",
+            "obs-otel"
           ],
           "relevant": [
             "ir-rerank",
@@ -881,19 +881,19 @@
             "recall_at_5": 1.0,
             "recall_at_10": 1.0,
             "mrr": 1.0,
-            "ndcg_at_10": 0.8339912323981488
+            "ndcg_at_10": 1.0
           },
           "ranked": [
-            "sec-jwt",
             "sec-tenancy",
-            "db-redis",
-            "obs-otel",
-            "db-postgres",
-            "db-elasticsearch",
-            "ir-rag-limits",
-            "db-opensearch",
+            "sec-jwt",
             "ir-dense",
-            "ir-hybrid"
+            "db-opensearch",
+            "db-elasticsearch",
+            "db-redis",
+            "ir-rag-limits",
+            "db-postgres",
+            "prod-cache",
+            "obs-otel"
           ],
           "relevant": [
             "sec-tenancy",

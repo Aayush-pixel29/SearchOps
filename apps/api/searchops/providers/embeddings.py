@@ -91,17 +91,44 @@ class GeminiEmbeddingProvider(EmbeddingProvider):
 class HuggingFaceEmbeddingProvider(EmbeddingProvider):
     name = "huggingface"
     _model = None
+    _tokenizer = None
 
     async def embed(self, texts: list[str]) -> list[list[float]]:
+        import os
+        os.environ["USE_TF"] = "0"
+        os.environ["USE_TORCH"] = "1"
         settings = get_settings()
+        
         try:
             from sentence_transformers import SentenceTransformer
-        except ImportError as exc:
-            raise RuntimeError("sentence-transformers not installed") from exc
-        if self._model is None:
-            HuggingFaceEmbeddingProvider._model = SentenceTransformer(settings.hf_embedding_model)
-        vectors = self._model.encode(texts, normalize_embeddings=True)
-        return [v.tolist() for v in vectors]
+            if self._model is None:
+                HuggingFaceEmbeddingProvider._model = SentenceTransformer(settings.hf_embedding_model)
+            vectors = self._model.encode(texts, normalize_embeddings=True)
+            return [v.tolist() for v in vectors]
+        except Exception:
+            # Fallback to direct transformers AutoModel + AutoTokenizer with mean pooling
+            from transformers import AutoModel, AutoTokenizer
+            import torch
+            
+            if HuggingFaceEmbeddingProvider._tokenizer is None:
+                HuggingFaceEmbeddingProvider._tokenizer = AutoTokenizer.from_pretrained(settings.hf_embedding_model)
+            if HuggingFaceEmbeddingProvider._model is None:
+                HuggingFaceEmbeddingProvider._model = AutoModel.from_pretrained(settings.hf_embedding_model)
+            
+            tokenizer = HuggingFaceEmbeddingProvider._tokenizer
+            model = HuggingFaceEmbeddingProvider._model
+            
+            encoded = tokenizer(texts, padding=True, truncation=True, max_length=512, return_tensors="pt")
+            with torch.no_grad():
+                output = model(**encoded)
+                # Mean pooling with attention mask
+                attention_mask = encoded["attention_mask"].unsqueeze(-1)
+                embeddings = torch.sum(output.last_hidden_state * attention_mask, dim=1) / torch.clamp(
+                    attention_mask.sum(dim=1), min=1e-9
+                )
+                # L2 normalize
+                embeddings = torch.nn.functional.normalize(embeddings, p=2, dim=1)
+            return embeddings.cpu().numpy().tolist()
 
 
 class MockEmbeddingProvider(HashedEmbeddingProvider):

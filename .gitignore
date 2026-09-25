@@ -17,6 +17,9 @@ node_modules/
 .next/
 out/
 apps/web/.next/
+*.tsbuildinfo
+test-results/
+playwright-report/
 
 # Env / secrets
 .env
